@@ -1,13 +1,13 @@
-# Name: Alexis Tipkemper-Sparks
-# email:  Tipkemam@mail.uc.edu
+# Name: Alexis Tipkemper-Sparks / Quynh Doan
+# email:  Tipkemam@mail.uc.edu / doanqb@mail.uc.edu
 # Assignment Number: Assignment 10
 # Due Date: 11/14/2024
 # Course #/Section:  IS 4010
 # Semester/Year:  Fall 2024
 # Brief Description of the assignment: Using python and API data to retrieve information and put into CSV form
 # Brief Description of what this module does: Practice python and using API data and keys
-# Citations:
-# Anything else that's relevant:
+# Citations: W3Schools / Geeks4Geeks / In Clas Assignment
+# Anything else that's relevant: N/A
 
 #url = "http://api.openweathermap.org/data/2.5/weather?q=London&appid=1cb3c2b82d302ffc5065e91193d228821&units=metric"
 #API key: cb3c2b82d302ffc5065e91193d228821
@@ -21,10 +21,11 @@ class WeatherAPIClient:
     @param latitude: The latitude of the location.
     @param longitude: The longitude of the location
     """
-    def __init__(self, city):
+    def __init__(self, city): #Constructor
         self.api_key = "cb3c2b82d302ffc5065e91193d228821"  # Replace with your actual OpenWeatherMap API key
         self.city = city
         self.url = f"http://api.openweathermap.org/data/2.5/weather?q={self.city}&appid={self.api_key}&units=metric"
+        
 
     def fetch_data(self):
         """
@@ -65,7 +66,7 @@ class WeatherAPIClient:
             writer = csv.writer(file)
             writer.writerow(weather_info.keys())  # Write header (column names)
             writer.writerow(weather_info.values())  # Write the extracted data as a row
-        print(f"Data saved to {filename}")
+        #print(f"Data saved to {filename}") 
 
 
 

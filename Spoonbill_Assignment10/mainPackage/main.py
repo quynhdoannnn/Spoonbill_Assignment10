@@ -1,13 +1,13 @@
-# Name: Alexis Tipkemper-Sparks
-# email:  Tipkemam@mail.uc.edu
+# Name: Alexis Tipkemper-Sparks / Quynh Doan
+# email:  Tipkemam@mail.uc.edu / doanqb@mail.uc.edu
 # Assignment Number: Assignment 10
 # Due Date: 11/14/2024
 # Course #/Section:  IS 4010
 # Semester/Year:  Fall 2024
 # Brief Description of the assignment: Using python and API data to retrieve information and put into CSV form
 # Brief Description of what this module does: Practice python and using API data and keys
-# Citations:
-# Anything else that's relevant:
+# Citations: W3Schools / Geeks4Geeks / In Clas Assignment
+# Anything else that's relevant: N/A
 
 from WeatherClientAPIPackage.WeatherAPIClient import WeatherAPIClient
 
