@@ -13,6 +13,7 @@
 #API key: cb3c2b82d302ffc5065e91193d228821
 
 import requests
+import json
 import csv
 
 class WeatherAPIClient:
@@ -22,6 +23,7 @@ class WeatherAPIClient:
     @param longitude: The longitude of the location
     """
     def __init__(self, city): #Constructor
+        self.parsed_json = None
         self.api_key = "cb3c2b82d302ffc5065e91193d228821"  # Replace with your actual OpenWeatherMap API key
         self.city = city
         self.url = f"http://api.openweathermap.org/data/2.5/weather?q={self.city}&appid={self.api_key}&units=metric"
@@ -34,13 +36,18 @@ class WeatherAPIClient:
         @return: A JSON object containing forecast data if the request is successful, or an empty dictionary if unsuccessful.
         @raises: Exception if there is a network issue or the server is unreachable.
         """
+        # Following architecture from InClass
+        # Commented out some excessive info
         response = requests.get(self.url)
-        print("HTTP Status Code:", response.status_code)  # Print status code to debug
-        if response.status_code == 200:
-            return response.json()  # Return raw JSON response
-        else:
-            print("Failed to retrieve data:", response.text)  # Display error message from server
-            return None
+        json_string = response.content
+        self.parsed_json = json.loads(json_string)
+        #print("HTTP Status Code:", response.status_code)  # Print status code to debug
+        #if response.status_code == 200:
+        return response.json()  # Return raw JSON response
+        #else:
+        #    print("Failed to retrieve data:", response.text)  # Display error message from server
+        #    return None
+
 
     def process_data(self, data):
         """
