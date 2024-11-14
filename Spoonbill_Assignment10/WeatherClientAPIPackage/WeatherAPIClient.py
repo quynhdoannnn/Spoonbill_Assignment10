@@ -2,15 +2,12 @@
 # email:  Tipkemam@mail.uc.edu / doanqb@mail.uc.edu
 # Assignment Number: Assignment 10
 # Due Date: 11/14/2024
-# Course #/Section:  IS 4010
-# Semester/Year:  Fall 2024
+# Course #/Section:  IS 4010-001
+# Semester/Year:  Fall Semester 2024
 # Brief Description of the assignment: Using python and API data to retrieve information and put into CSV form
-# Brief Description of what this module does: Practice python and using API data and keys
-# Citations: W3Schools / Geeks4Geeks / In Clas Assignment
+# Brief Description of what this module does: This module defines a WeatherAPIClient class that retrieves, processes, and saves weather data for a specified city using the OpenWeatherMap API. It includes methods to fetch data in JSON format, extract key details (such as temperature, weather conditions, humidity, and wind speed), and save this information to a CSV file. The module streamlines interaction with the weather API and ensures data is saved in a structured format for easy access.
+# Citations: W3Schools / Geeks4Geeks / In Class Assignment
 # Anything else that's relevant: N/A
-
-#url = "http://api.openweathermap.org/data/2.5/weather?q=London&appid=1cb3c2b82d302ffc5065e91193d228821&units=metric"
-#API key: cb3c2b82d302ffc5065e91193d228821
 
 import requests
 import json
